@@ -23,9 +23,17 @@
         margin: 1rem auto;
     }
 
-    .editor-container {
-        height: 300px;
-      }
+        .editor-container {
+            height: 300px;
+
+            .ql-editor {
+
+                p {
+                    line-height: 10px;
+                }
+
+            }
+        }
 
 
         .email-parameters {
