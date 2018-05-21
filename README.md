@@ -1,6 +1,5 @@
 ## Real Ignite
 
-<img src="https://travis-ci.org/tonyobanon/real_ignite.svg?branch=master">
 
 Real Ignite is a full stack messaging app that end-users can use to reliably send emails to friends and colleagues. It abstracts multiple email service providers that are used behind the scenes . It also ships with features that enables the user to store drafts, track sent items, and view a simple dashboard of his activity. The UI is simple and interactive, and users are able to construct emails using an integrated WYSIWYG editor. 
 
