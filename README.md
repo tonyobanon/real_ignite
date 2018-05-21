@@ -34,7 +34,7 @@ All views are declared in a `.view` file, and are dynamically inserted into the 
 Also, client assets (images, stylesheets, scripts, views) exists in the `assets` folders, and several gulp tasks minify these assets and extract them to the `public` folder from where they are served up.
 
 ### Metrics and Analytics
-Our application heavily submits metric data at various application tiers. We use graphite to visualize data collected and run graph functions. For example see `http://metrics.realignite.com/dashboard/total_requests`
+Our application heavily submits metric data at various application tiers. We use graphite to visualize data collected and run graph functions.
 
 ### Authentication
 The application rely on third party OAuth providers to retrieve basic information about the user. After successful login, a Jwt token is issued and used for future requests. No token, or session data is stored on the server. All tokens are available as cookies on the user's browser. On token generation, a timeout is set, after which the token becomes invalid.
