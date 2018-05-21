@@ -1,0 +1,25 @@
+//Global Util functions & Mixins
+@import "utils/utils";
+
+//Global Settings file
+@import "settings";
+
+//Reset CSS
+// From the `normalize-scss` package
+@import "normalize";
+@include normalize();
+
+@import "global";
+
+//pages here
+@import "pages/index";
+
+//view here
+
+@import "views/compose";
+@import "views/dashboard";
+@import "views/index";
+@import "views/messages";
+
+//components here
+@import "components/animations/main";

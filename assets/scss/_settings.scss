@@ -1,0 +1,76 @@
+//1. Colors
+//2. Globals
+//3. Header
+//4. misc
+
+//1. Colors
+$client-pallet: (
+    blue: #004f8c,
+    blue-shade: #004483,
+    orange: #e38b23,
+    skyblue: #4a90e2,
+    light-orange: #e38b23,
+    tone-ash: #7f8182,
+    tone-orange: #ffefde,
+    dark-red: #c81600,
+    tone-red: #ffdfdf,
+    dark-green: #4e8c2a,
+    light-green: #f3ffeb,
+    midnight-blue: #476382
+);
+
+$gray-pallet: (
+    silver: #dcdee0,
+    silver_two: #d7d9dc,
+    mid: #a8a8a8,
+    tint: #979797,
+    tint_2: #d7d7d7,
+    brownish_grey: #5e5e5e,
+    steel_grey: #7f8182,
+    steel_grey_two: #999999,
+    thick: #25272a,
+    steel_thick: #292929,
+    brownish_grey_two: #696969,
+    light-grey: #edf0f2,
+    thin_grey: #323232
+);
+
+
+$red: #cc1b00;
+$green: #66ac4f;
+$white: #ffffff;
+$orange: #e66b00;
+$black: #000000;
+$red-deals: #d41c00;
+
+// Loader Settings... any units
+$loader-width: to-rem(20);
+
+$loader-pallet: (
+    green: #0f9d58,
+    blue: #4285f4,
+    red: #db4437,
+    yellow: #f4b400,
+    white: $white
+);
+
+//2. Globals
+$global-font-size: 100%;
+
+//2.1 Body styles
+$body-font-size: $global-font-size;
+$body-font-color: #1c1d1f;
+$body-font-family: 'roboto', 'Helvetica Neue', 'open sans', sans-serif;
+$body-background-color: #f2f7fc;
+
+//2.2 Typography
+$global-weight-bold: 700;
+$global-weight-medium: 600;
+$global-weight-normal: 400;
+
+//3. Header
+$header-height: to-rem(50);
+$header-background: map-get($client-pallet, blue);
+
+//4. misc
+$border-radius: 3px;

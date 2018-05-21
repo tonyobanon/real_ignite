@@ -1,0 +1,25 @@
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
+
+
+<div class="group">
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="ct-chart mail-trend">
+        </div>
+    </div>
+    <div class="mdl-card mdl-shadow--2dp">
+        <div class="user-mail-stats">
+        
+        <div class="stat emails-created">
+            <div class="name">Emails Created</div>
+            <div class="value">0</div>
+        </div> 
+
+        <div class="stat emails-sent">
+            <div class="name">Emails Sent</div>
+            <div class="value">0</div>
+        </div>
+        
+        </div>
+    </div>
+<div>

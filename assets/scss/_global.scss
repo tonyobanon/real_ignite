@@ -1,0 +1,118 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    -webkit-tap-highlight-color: rgba( map-get($client-pallet, midnight-blue), 0.3);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: $body-font-family;
+    overflow-x: hidden;
+    background: $body-background-color;
+    font-size: $body-font-size;
+    color: $body-font-color;
+
+    @media (max-width: 260px) {
+        font-size: 14px;
+    }
+
+}
+
+a {
+    cursor: pointer;
+    color: map-get($client-pallet, blue);
+}
+
+// Reset the box-sizing of all elements to border-box
+* {
+    box-sizing: border-box;
+}
+
+/*!
+ * Global Reset
+**/
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none ;
+}
+
+//links
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Reset images for responsive behavior
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Set vertical alignment for svg elements
+svg {
+    vertical-align: middle;
+}
+
+/*!
+ * Global Utils
+**/
+.clearfix {
+    -ms-zoom: 1; //for IE only //TODO add user agent detection for this
+
+    &:after,
+    &:before {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.pull {
+    &-left {
+        float: left;
+    }
+
+    &-right {
+        float: right;
+    }
+}
+
+.center-align {
+    
+        margin: auto;
+        right: 0;
+    
+        left: 0;
+        bottom: 0;
+        top:0;
+        position: absolute;
+        height: max-content;
+    
+        width: max-content;
+}
+
+@include clearfix;

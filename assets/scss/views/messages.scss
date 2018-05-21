@@ -1,0 +1,29 @@
+
+.messages {
+
+    &.view {
+        min-width: 60%;
+        height: 100%;
+        margin: 1rem auto;
+    
+    .mdl-data-table {
+        width: 100%;
+        height: 100%;
+
+        &>tr {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .area {
+        &.footer {
+            margin: 3rem 0;
+        }
+    }
+
+    }
+
+}

@@ -1,0 +1,55 @@
+/// A list of named breakpoints. You can use these with the `breakpoint()` mixin to quickly create media queries.
+$breakpoints: (
+    small: 260px,
+    semi-medium: 320px,
+    medium: 400px,
+    semi-large: 450px,
+    large: 640px,
+    extra-large: 800px
+) !default;
+
+@function breakpoint($bp: small) {
+    $value: '';
+
+    //checks if $bp is present in the breakpoint list
+    @if map-has-key($breakpoints, $bp) {
+        $value: $value + '(max-width: #{map-get($breakpoints, $bp)})';
+    } @else {
+        @warn '#{$bp} no found in  list of breakpoints'
+    }
+    @return $value;
+}
+
+@mixin breakpoint($bp: small) {
+    $breakpoint: breakpoint($bp);
+
+    @if $breakpoint == '' {
+        @content
+    } @else {
+        @media screen and #{$breakpoint}{
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-dpi($bp:'small', $dpi:2 ) {
+    $value: '';
+
+    @if $bp == '' {
+        $value: '(-webkit-min-device-pixel-ratio:' +$dpi ')';
+    } @else {
+        $value: '(min-width: #{map-get($breakpoints, $bp)})' + 'and (-webkit-min-device-pixel-ratio:' +$dpi ')';
+    }
+    @media #{$value} {
+        @content;
+    }
+}
+
+@mixin breakpoint-mini($bp:'small') {
+    $value: '';
+    $value: '(min-width: #{map-get($breakpoints, $bp)})';
+
+    @media #{$value} {
+        @content;
+    }
+}

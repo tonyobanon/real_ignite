@@ -1,0 +1,55 @@
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Set the formatter to 'html'
+  formatter: html
+  # Output file instead of logging results
+  output-file: 'coverage/sass-lint/index.html'
+  # Raise an error if more than 50 warnings are generated
+  max-warnings: 50
+# File Options
+files:
+  include: 'assets/s+(a|c)ss/**/*.s+(a|c)ss'
+  ignore:
+    - 'sass/vendor/**/*.*'
+
+
+# Rule Configuration
+# rules:
+#   # Extends
+#   extends-before-mixins: 2
+#   extends-before-declarations: 2
+#   placeholder-in-extend: 2
+
+#   # Mixins
+#   mixins-before-declarations: 1
+
+#   # Line Spacing
+#   one-declaration-per-line: 1
+#   empty-line-between-blocks: 1
+
+#   # Disallows
+#   no-css-comments: 1
+#   no-debug: 1
+#   no-duplicate-properties: 1
+#   no-empty-rulesets: 1
+#   no-ids: 1
+#   no-important: 1
+
+#   # Style Guide
+#   hex-notation:
+#     - 2
+#     -
+#       style: lowercase
+#   indentation:
+#     - 2
+#     -
+#       size: 4
+#   property-sort-order:
+#     - 1
+#     -
+#       order:
+#         - display
+#         - margin
+#       ignore-custom-properties: true
+#   variable-for-property: 1

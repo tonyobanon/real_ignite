@@ -1,0 +1,24 @@
+
+.index {
+    &.view {
+        
+    .mdl-card__title-text {
+        color: #3f51b5;
+        font-weight: 900;
+    }
+
+    .mdl-card {
+        width: 512px;
+    }
+
+    .mdl-card__title {
+        background: url('../images/index-card-picture.png') center / cover;
+        height: 176px;
+        color: #fff;
+    }
+
+    .mdl-card__menu {
+        color: #fff;
+    }
+    }
+}

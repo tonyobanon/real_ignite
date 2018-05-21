@@ -1,0 +1,24 @@
+
+    <div class="header area">
+        <h5 style="color: gray" class="title"></h5>
+    </div>
+
+    <table class="mdl-data-table mdl-shadow--2dp" style="display: none;">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Title</th>
+                <th>Body Preview</th>
+                <th>Sent</th>
+                <th>Date Created</th>
+                <th>Date Updated</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <div class="footer area">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="render('compose');">
+            Compose Email
+        </button>
+    </div>

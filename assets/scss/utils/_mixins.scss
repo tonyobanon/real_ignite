@@ -1,0 +1,132 @@
+$default-float: left !default;
+
+@mixin clearfix {
+    
+    //-ms-zoom: 1; //for IE only //TODO add user agent detection for this
+
+    &:after,
+    &:before {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+}
+
+//for adding box sizing
+@mixin box-sizing($type:border-box) {
+    -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+    -moz-box-sizing: $type;
+    box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+//for adding box sizing
+@mixin border-radius($px) {
+    -webkit-border-radius: $px; // Android < 2.3, iOS < 4
+    -moz-border-radius: $px;
+    border-radius: $px; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+@mixin transition($time:0.3s) {
+    -webkit-transition: all $time ease-out;
+    transition: all $time ease-out;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//makes and inline ordered or unordered list
+@mixin inline-list(
+    $float: $default-float,
+    $margin: $inline-list-item-margin,
+    $opposite-float: $float) {
+
+    @include clearfix();
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+
+    > li {
+        display: block;
+        float: $float;
+        margin-#{$opposite-float}: $margin;
+
+        &:last-child {
+            margin-#{$opposite-float}: 0;
+        }
+    }
+}
+
+// Reset styles for List elements
+@mixin list-reset($list-style: none) {
+    margin: 0;
+    padding: 0;
+    list-style: $list-style;
+}
+
+//this mixin styles the checkboxes and radio buttons
+
+@mixin list-checkbox() {
+    &__item-checkbox-input {
+        $checkbox-size: to-rem(15);
+        $checkbox-border-width: to-rem(2);
+        $checkbox-inner-size: $checkbox-size - ($checkbox-border-width * 2);
+        $checkbox-dot-size: to-rem(7);
+
+        & + label {
+            display: none;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            line-height: $checkbox-inner-size;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: to-rem(3);
+            border: 2px solid map_get($gray-pallet, steel_grey);
+            cursor: pointer;
+
+            svg {
+                height: $checkbox-inner-size;
+                width: $checkbox-inner-size;
+            }
+
+            path {
+                fill: $white;
+            }
+        }
+
+        &:checked + label {
+            background-color: map_get($client-pallet, blue);
+            border-color: map_get($client-pallet, blue);
+        }
+
+        &_radio + label {
+            border-radius: $checkbox-size;
+        }
+
+        &_radio:checked + label {
+            background-color: $white;
+        }
+
+        //TODO Find a better way to target the &-dot
+        &_radio:checked + label &-dot {
+            background-color: map_get($client-pallet, blue);
+        }
+
+        &-dot {
+            display: inline-block;
+            width: to-rem($checkbox-dot-size);
+            height: to-rem($checkbox-dot-size);
+            border-radius: to-rem($checkbox-dot-size);
+            background-color: $white;
+            vertical-align: middle;
+            margin-top: ($checkbox-inner-size - $checkbox-dot-size) / 2;
+        }
+    }
+}

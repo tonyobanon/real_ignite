@@ -1,0 +1,49 @@
+
+
+// MDL Overrides
+
+.mdl-navigation__link {
+
+    &.active {
+        background-color: #e0e0e0;
+    }
+
+    .material-icons {
+        padding: 0 to-rem(15); 
+    } 
+}
+
+.mdl-data-table {
+    th {
+        text-align: left;
+        font-weight: 900;
+    }
+    td {
+        text-align: left;
+    }
+}
+
+.mdl-layout__drawer-button {
+    display: none;
+}
+
+body {
+    //background: white;
+}
+
+.view {
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    height: max-content;
+    width: max-content;
+
+    .area {
+        .mdl-button {
+            margin-right: 1em;
+        }
+    }
+}

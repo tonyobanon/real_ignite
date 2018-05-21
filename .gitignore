@@ -1,0 +1,12 @@
+.vscode/
+/coverage
+/docker_logs
+/public
+node_modules
+*.log
+client-secret.json
+package-lock.json
+
+/bin/production_start_frontend.sh
+/bin/production_start_backend.sh
+.production.env

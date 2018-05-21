@@ -1,0 +1,94 @@
+
+.compose {
+
+    &.view {
+
+        background: white;
+        padding: 1rem !important;
+        margin: 1rem auto !important;
+
+        @media (max-width: 667px) {
+            max-width: 90%;
+        }
+
+        @media (min-width: 667px) { 
+            max-width: 70%;
+        }
+  
+        @media (min-width: 1105px) {
+            max-width: 50%;
+        }
+            
+    .standalone-container {
+        margin: 1rem auto;
+    }
+
+    .editor-container {
+        height: 300px;
+      }
+
+
+        .email-parameters {
+            &.area {
+                margin-top: 0;
+            }
+    
+            .item {
+    
+                .title {
+                    font-weight: 700;
+                    display: inline-block;
+                }
+    
+                padding-bottom: 0.5rem;
+                padding: 0px 0;
+                .mdl-textfield {
+                    //padding-top: 0;
+                    &__input {
+                        //padding: 0;
+                    }
+                }
+        
+                .mdl-textfield__label {
+                    top: 0.7rem;
+                }
+    
+                .mdl-chip {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    
+        .header {
+            &.area {
+                margin-top: 0;
+            }
+            h5 {
+                margin-top: 0;
+            }
+        }
+
+
+        .area {
+            
+        &.attachment {
+
+            margin: 2rem auto;
+
+            .mdl-progress {
+                margin: 1rem auto;
+                display: none;
+            }
+
+            .files .name, .files .remove{
+                display: inline-block;
+                margin-right: 2rem;
+            }
+
+        }
+
+        }
+
+    }
+
+}
