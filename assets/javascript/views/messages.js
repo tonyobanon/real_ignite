@@ -100,6 +100,7 @@ function __upgrade_messages_view(messages, context) {
                 row.find(':nth-child(2)').html(body_preview);
                 row.find(':nth-child(3)').html(is_sent);
                 row.find(':nth-child(5)').html(updated_at);
+                row.onclick = function(){};
             }
 
             if (!message.is_sent) {
