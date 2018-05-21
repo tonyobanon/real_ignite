@@ -17,11 +17,6 @@ To setup this project locally:
 
 ## Architecture
 
-### Cloud Architecture
-The application itself is hosted on a set of instances on GCP, and a load balancer exists that routes 
-traffic to these instance(s).
- MySQL, Redis and Metrics servers are deployed on auto-scaled VM instances.  There are inbound firewall rules to ensure that the servers are only accessible within the internal network.
-
 ### Database
 MySQL database is used to store persistent data including basic user information and email messages. Migration scripts may be added to the `migrations` folder.
 
@@ -61,7 +56,7 @@ On push, a build is triggered on Travis CI. Our deployment pipeline is fully int
 - Html5 pushState (for the client)
 - Swagger API docs
 - Proper user timezone synchronization
-- A service layer to properly orchestrate caching for most model operations
+- A service layer to properly orchestrate caching for most model operations (Very important)
 - Submitting metrics for database operations in models
 - Full test coverage
 
