@@ -18,9 +18,9 @@ To setup this project locally:
 ## Architecture
 
 ### Cloud Architecture
-The application itself is hosted on a set instance groups on GCP, and a load balancer exists that routes 
-traffic to the backend instance(s) .
- MySQL, Redis and Metrics servers are deployed on auto-scaled VM instances.  There are inbound firewall rules to ensure that the servers are only accessible within the internal network. 
+The application itself is hosted on a set of instances on GCP, and a load balancer exists that routes 
+traffic to these instance(s).
+ MySQL, Redis and Metrics servers are deployed on auto-scaled VM instances.  There are inbound firewall rules to ensure that the servers are only accessible within the internal network.
 
 ### Database
 MySQL database is used to store persistent data including basic user information and email messages. Migration scripts may be added to the `migrations` folder.
@@ -34,7 +34,7 @@ All views are declared in a `.view` file, and are dynamically inserted into the 
 Also, client assets (images, stylesheets, scripts, views) exists in the `assets` folders, and several gulp tasks minify these assets and extract them to the `public` folder from where they are served up.
 
 ### Metrics and Analytics
-Our application heavily submits metric data at various application tiers. We use graphite to visualize data collected and run graph functions. For example see `http://metrics.realignite.com/dashboard/send-email-message`
+Our application heavily submits metric data at various application tiers. We use graphite to visualize data collected and run graph functions.
 
 ### Authentication
 The application rely on third party OAuth providers to retrieve basic information about the user. After successful login, a Jwt token is issued and used for future requests. No token, or session data is stored on the server. All tokens are available as cookies on the user's browser. On token generation, a timeout is set, after which the token becomes invalid.
@@ -64,6 +64,7 @@ On push, a build is triggered on Travis CI. Our deployment pipeline is fully int
 - A service layer to properly orchestrate caching for most model operations
 - Submitting metrics for database operations in models
 - Full test coverage
+
 
 ###  About Me
 My name is Anthony. I am a Software Engineer, with experience in building scalable systems. In my free time I work on personal projects or read about software engineering trends. I always want to learn new things.
