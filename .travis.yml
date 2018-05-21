@@ -10,5 +10,4 @@ before_install:
 deploy:
   provider: gae
   keyfile: client-secret.json
-  project: ri-app
-  on: production
+  project: real-ignite
