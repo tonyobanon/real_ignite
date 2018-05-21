@@ -418,12 +418,12 @@ function __render(view_id, context, opts) {
         // Call the view's show function
         call_show_function();
         
-        var opts = rendererNamespace.renderingOpts;
-
         if (opts.call_hide_function == true) {
             // Call the previous view's hide function
             call_hide_function();
         }
+
+        var opts = rendererNamespace.renderingOpts;
 
         //  Push state to browser history 
         if (opts.enable_pushState && opts.historyDisabledViews.indexOf(viewId) == -1) {
