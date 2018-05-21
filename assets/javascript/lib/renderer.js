@@ -423,8 +423,6 @@ function __render(view_id, context, opts) {
             call_hide_function();
         }
 
-        var opts = rendererNamespace.renderingOpts;
-
         //  Push state to browser history 
         if (opts.enable_pushState && opts.historyDisabledViews.indexOf(viewId) == -1) {
             var stateObj = {
@@ -433,7 +431,7 @@ function __render(view_id, context, opts) {
             };
             history.pushState(stateObj, opts.viewTitle, '/?_=' + generateShortId());
         }
-    }
+    } 
 
     function call_init_function() {
         var init_function = window['__load_' + view_id + '_context'];
